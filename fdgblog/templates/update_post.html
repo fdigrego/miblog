@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %}Edit A Post{% endblock %}
+
+{% block content %}
+
+    <h1>Update Post</h1>
+    <br>
+    <div class="form-floating">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-secondary">Update</button>
+    </div>
+
+{% endblock %}
