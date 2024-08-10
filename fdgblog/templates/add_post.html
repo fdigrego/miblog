@@ -3,6 +3,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
     <h1>Add Post</h1>
     <br>
     <div class="form-floating">
@@ -11,5 +13,11 @@
             {{ form.as_p }}
             <button class="btn btn-secondary">Post</button>
     </div>
+
+{% else %}
+
+You need to Register/Login to add a post.
+
+{% endif %}
 
 {% endblock %}
