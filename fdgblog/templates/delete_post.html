@@ -5,21 +5,26 @@
 
 {% if user.is_authenticated %}
 
-    <h1>Delete Post</h1>
-    <br>
-    <h3>Delete: {{ post.title }}</h3>
+    {% if user.id == post.author.id %}
 
-    <br/>
-    <div class="form-floating">
-        <form method="POST">
-            {% csrf_token %}
-            <strong>Are you sure?!</strong><br/><br/>
-            <button class="btn btn-secondary">Delete Post!</button>
-    </div>
+        <h1>Delete Post</h1>
+        <br><h3>Delete: {{ post.title }}</h3><br/>
+        <div class="form-floating">
+            <form method="POST">
+                {% csrf_token %}
+                <strong>Are you sure?!</strong><br/><br/>
+                <button class="btn btn-secondary">Delete Post!</button>
+        </div>
+    
+    {% else %}
+
+        You need to Register/Login to delete a post.        
+    
+    {% endif %}
 
 {% else %}
 
-You need to Register/Login to del a post.
+You need to Register/Login to delete a post.
     
 {% endif %}
 
