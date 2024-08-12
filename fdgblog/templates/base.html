@@ -27,6 +27,11 @@
                 </li>
 
                 <li class="nav-item">
+                  <a class="nav-link" href="{% url 'add_category' %}">Add Category</a>
+                </li>
+
+
+                <li class="nav-item">
                   <!-- Este form resuelve el problema de autenticación o logout 
                    con el metodo POST y el csrf token -->
                   <form method="POST" action="{% url 'logout' %}" style="display:inline;">
