@@ -14,9 +14,16 @@
             <button class="btn btn-secondary">Post</button>
     </div>
 
+    <script>
+
+        var name = "{{ user.id }}";
+        document.getElementById("js_ref").value = name;
+
+    </script>
+
 {% else %}
 
-You need to Register/Login to add a post.
+    You need to Register/Login to add a post.
 
 {% endif %}
 
