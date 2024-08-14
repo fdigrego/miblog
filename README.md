@@ -3,3 +3,4 @@
 3. Apps: 'miblog' raíz del blog, 'fdgblog' el blog en sí mismo y 'members' la app para gestión de usuarios
 4. Companion: ayuda de las clases (materiales y videos), youtube (ejemplos), codeium (escribir code) y gemini AI (para chequear, validar y mejorar code)
 5. En la app 'members', utilizamos el auth de django, validando estrictamente el login/logout del usuario (permisos, edicion/eliminacion)
+6. Agregamos la funcionalidad de un editor de textos en el blog (django-ckeditor) usando pip. Implica una nueva migración de datos.

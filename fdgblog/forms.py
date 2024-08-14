@@ -11,7 +11,7 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         # fields = '__all__'
-        fields = ('title', 'title_tag', 'author', 'category', 'content')
+        fields = ('title', 'title_tag', 'author', 'category', 'content', 'snippet')
         
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter a Title ...'}),
@@ -20,13 +20,14 @@ class PostForm(forms.ModelForm):
             #'author': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter Content ...'}),
+            'snippet': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter Content ...'}),
         }
         
 class EditForm(forms.ModelForm):
     class Meta:
         model = Post
         # fields = '__all__'
-        fields = ('title', 'title_tag', 'category', 'content')
+        fields = ('title', 'title_tag', 'category', 'content', 'snippet')
         
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Enter a Title ...'}),
@@ -34,4 +35,5 @@ class EditForm(forms.ModelForm):
             #'author': forms.Select(attrs={'class': 'form-control'}),
             'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
             'content': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter Content ...'}),
+            'snippet': forms.Textarea(attrs={'class': 'form-control', 'placeholder': 'Enter Content ...'}),
         }
